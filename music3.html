@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="font/fontawesome-free-5.15.2-web/css/all.css">
+    <script src="music3.js"></script>
+    <script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="music3.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music play</title>
+    <link rel="icon" href="2.jpeg">
+    <script>
+        // window.addEventListener("keydown", function(e) {
+        //     if (e.keyCode == 32) {
+        //         playy();
+        //     }
+        //     if (e.keyCode == 37) {
+        //         pre();
+        //     }
+        //     if (e.keyCode == 39) {
+        //         next();
+        //     }
+
+
+        // });
+    </script>
+</head>
+
+<body>
+    <div class="frame">
+
+        <div class="song_name"><img src="images/radu-florin-V8H6hXhmoqI-unsplash.jpg" alt="image" id="image"><span id="songname">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name song</span></div>
+
+        <!-- /* circle part */ -->
+        <div class="box">
+            <img id="imag_circle" src="images/1.jpg" alt="image" class="circle">
+        </div>
+        <!-- /* circle part End */ -->
+
+        <!-- time section -->
+        <div class="time">
+            <span class="left"><span id="left_left">00</span>:<span id="left_right">00</span></span>
+            <span class="rignt"><span id="right_left">00</span>:<span id="right_right">00</span></span>
+        </div>
+        <!-- time section End-->
+
+        <!-- add song  -->
+        <audio id="song"><source src="song/1.mp3" type="audio/mp3"></audio>
+
+        <!-- range part -->
+        <input type="range" id="range" oninput="range()" min="0" value="" max="">
+        <!-- End  range part -->
+
+
+        <div class="icons">
+            <i onclick="pre()" class="fas fa-step-backward"></i>
+            <span class="pop">  <i id="play"  onclick="playy()" class="fas fa-play-circle"></i>
+        <span id="pop">Play</span>
+            </span>
+            <i onclick="next()" class="fas fa-step-forward"></i>
+        </div>
+
+        <!-- range for volume -->
+        <span class="volume_range">
+        <input type="range" id="range_volume" value="100" min="0%" max="100%">
+        </span>
+        <span class="volume_icon"><i class="fas fa-volume-up"></i></span>
+        <span id="valuevolume">10%</span>
+
+    </div>
+</body>
+
+</html>
